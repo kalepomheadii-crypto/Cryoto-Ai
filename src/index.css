@@ -1,0 +1,56 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#2dd4bf;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#071021 0%, #0f1724 100%);
+  color:#e6eef8;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.header{
+  padding:1rem 1.25rem;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.header h1{margin:0;font-size:1.25rem}
+.app main{flex:1;padding:1.25rem}
+.footer{padding:0.75rem 1.25rem;color:var(--muted)}
+
+.dashboard{max-width:900px;margin:0 auto}
+.controls{margin-bottom:1rem}
+.search{display:flex;gap:0.5rem;align-items:center}
+.search input{
+  flex:1;padding:0.5rem 0.75rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
+  background:var(--glass);color:inherit;
+}
+.search button{
+  padding:0.5rem 0.75rem;border-radius:8px;border:none;background:var(--accent);color:#022;
+  cursor:pointer;
+}
+.suggestions{list-style:none;padding:0;margin:0.5rem 0;display:grid;gap:0.25rem}
+.suggestions li button{
+  width:100%;text-align:left;padding:0.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.03);
+  background:transparent;color:inherit;cursor:pointer;
+}
+
+.placeholder{opacity:0.9;color:var(--muted);padding:2rem;border:1px dashed rgba(255,255,255,0.02);border-radius:8px}
+
+.weather-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);
+}
+.weather-card h2{margin:0 0 0.5rem 0}
+.current{display:flex;gap:1rem;align-items:center}
+.temp{font-size:3rem;font-weight:700;color:var(--accent)}
+.meta{color:var(--muted)}
+.hourly{margin-top:1rem}
+.hourly-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:0.5rem}
+.hour{background:rgba(255,255,255,0.02);padding:0.5rem;border-radius:6px;text-align:center}
+.loading,.error{margin-top:1rem;color:var(--muted)}
